@@ -6,7 +6,7 @@ import Product from "./page/Product";
 const Router = () => {
   return (
     <Routes>
-      <Route path="/product" element={<Product />} />
+      <Route path="/" element={<Product />} />
       <Route path="/desktop" element={<Desktop />} />
       <Route path="/download" element={<Download />} />
     </Routes>
