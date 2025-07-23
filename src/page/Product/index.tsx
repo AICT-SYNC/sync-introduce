@@ -6,7 +6,7 @@ const Product = () => {
   return (
     <>
       <Header />
-      <p>프로덕트 페이지</p>
+      <S.Text>프로덕트 페이지</S.Text>
       <Footer />
     </>
   );
