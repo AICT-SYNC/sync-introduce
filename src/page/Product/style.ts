@@ -47,8 +47,6 @@ export const TextContent = styled.div<{ $centered?: boolean }>`
   gap: 24px;
   ${(props) => props.$centered && "align-items: center;"}
 
-  ${(props) => props.reversed && "grid-area: text;"} /* 이미지/텍스트 순서 변경용 */
-
   @media (max-width: 768px) {
     ${(props) => props.$centered && "align-items: center;"}
   }
