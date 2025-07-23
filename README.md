@@ -1,69 +1,67 @@
-# React + TypeScript + Vite
+# Sync Desktop App Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sync 데스크탑 애플리케이션을 소개하고 다운로드할 수 있는 웹사이트입니다.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 📱 반응형 디자인
+- 🖥️ 데스크탑 앱 소개 및 다운로드
+- 💻 macOS 및 Windows 지원
+- ⚡ Vite + React + TypeScript로 구축
 
-## Expanding the ESLint configuration
+## 📦 Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+## 🏗️ Build
+
+```bash
+npm run build
+```
+
+## 🚀 Deploy
+
+GitHub Pages 배포:
+
+```bash
+npm run deploy
+```
+
+## 📁 Project Structure
+
+```
+src/
+├── Components/          # 재사용 가능한 컴포넌트
+│   ├── Header/
+│   └── Footer/
+├── page/               # 페이지 컴포넌트
+│   ├── Desktop/        # 메인 소개 페이지
+│   ├── Download/       # 다운로드 페이지
+│   └── Product/        # 제품 소개 페이지
+├── Assets/             # 이미지 및 아이콘
+└── global.css          # 전역 스타일
+```
+
+## 📥 Download Files
+
+다운로드 파일은 `public/downloads/` 폴더에 위치합니다:
+
+- `sync-mac.dmg` - macOS용 설치 파일
+- `sync-windows.exe` - Windows용 설치 파일
+
+## 🔧 Tech Stack
+
+- React 19
+- TypeScript
+- Vite
+- Styled Components
+- React Router DOM
+- Bootstrap
