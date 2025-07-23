@@ -1,25 +1,24 @@
 import * as S from "./style";
 import Header from "../../Components/Header";
 import Footer from "../../Components/Footer"
-import appleLogo from "../../Assets/appleLogo.svg"
-import windowLogo from "../../Assets/windowLogo.svg"
+import appleLogo from "../../Assets/icons/appleLogo.svg"
+import windowLogo from "../../Assets/icons/windowLogo.svg"
 
 const Download = () => {
-  const handleDownload = (platform: string) => {
-    alert(`${platform} 버전이 곧 출시됩니다!`);
+  
+  const handleDownload = (platform: 'mac' | 'windows') => {
     
-    // 실제 파일이 있을 때 사용할 코드:
-    // const downloadUrls = {
-    //   mac: '/downloads/sync-mac.dmg',
-    //   windows: '/downloads/sync-windows.exe'
-    // };
-    // 
-    // const link = document.createElement('a');
-    // link.href = downloadUrls[platform];
-    // link.download = `sync-${platform}`;
-    // document.body.appendChild(link);
-    // link.click();
-    // document.body.removeChild(link);
+    const downloadUrls = {
+      mac: '/downloads/sync-mac.dmg',
+      windows: '/downloads/sync-windows.exe'
+    };
+    
+    const link = document.createElement('a');
+    link.href = downloadUrls[platform];
+    link.download = `sync-${platform}`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (

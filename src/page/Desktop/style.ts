@@ -126,7 +126,7 @@ export const ImageContainer = styled.div`
 
 export const MainImg = styled.img`
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
   height: auto;
   display: block;
   border-radius: 12px;

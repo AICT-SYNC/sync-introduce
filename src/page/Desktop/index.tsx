@@ -1,8 +1,8 @@
 import * as S from "./style";
 import Header from "../../Components/Header";
 import Footer from "../../Components/Footer"
-import IntroducePage from "../../Assets/introducePage.png";
-import arrow from "../../Assets/arrow_right.svg";
+import IntroducePage from "../../Assets/images/introducePage.png";
+import arrow from "../../Assets/icons/arrow_right.svg";
 import { useNavigate } from "react-router-dom";
 
 const Main = () => {

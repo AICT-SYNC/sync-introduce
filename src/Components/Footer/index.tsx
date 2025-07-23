@@ -1,5 +1,5 @@
 import * as S from "./style";
-import logo from "../../Assets/logo.svg";
+import logo from "../../Assets/icons/logo.svg";
 import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
