@@ -13,18 +13,11 @@ const Download = () => {
       windows: '/sync-introduce/downloads/sync-windows.exe'
     };
     
-    const link = document.createElement('a');
-    link.href = downloadUrls[platform];
-    
-    if (platform=="mac") {
-      link.download = "Sync Desktop-1.0.0-arm64.dmg";
+    if (platform === "mac") {
+      window.open(downloadUrls[platform], '_blank');
     } else {
       alert("준비중입니다.");
-      return;
     }
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
   };
 
   return (
