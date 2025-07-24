@@ -19,7 +19,7 @@ const Download = () => {
     if (platform=="mac") {
       link.download = "Sync Desktop-1.0.0-arm64";
     } else {
-      alert("준비중입니다.")
+      alert("준비중입니다. ")
       return 1
       link.download = "";
     }
