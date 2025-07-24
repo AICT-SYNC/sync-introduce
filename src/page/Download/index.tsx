@@ -13,8 +13,14 @@ const Download = () => {
       windows: '/sync-introduce/downloads/sync-windows.exe'
     };
     
+    const link = document.createElement('a');
+    link.href = downloadUrls[platform];
+    link.download = '';
+    
     if (platform === "mac") {
-      window.open(downloadUrls[platform], '_blank');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
     } else {
       alert("준비중입니다.");
     }
