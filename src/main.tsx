@@ -4,7 +4,7 @@ import Router from "./router";
 import { BrowserRouter } from 'react-router-dom';
 
 createRoot(document.getElementById("root")!).render(
-  <BrowserRouter basename="/sync-introduce/">
+  <BrowserRouter>
     <Router />
   </BrowserRouter>
 );
