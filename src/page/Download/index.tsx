@@ -9,7 +9,7 @@ const Download = () => {
   const handleDownload = (platform: 'mac' | 'windows') => {
     
     const downloadUrls = {
-      mac: '/downloads/Sync Desktop-1.0.0-arm64.dmg',
+      mac: 'https://github.com/AICT-SYNC/sync-introduce/releases/download/v1.0.0/Sync.Desktop-1.0.0-arm64.dmg',
       windows: '/sync-introduce/downloads/sync-windows.exe'
     };
     
