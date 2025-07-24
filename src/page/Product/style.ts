@@ -14,9 +14,18 @@ export const Container = styled.div`
   max-width: 1600px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 40px;
+
+  @media (max-width: 1200px) {
+    padding: 0 30px;
+  }
 
   @media (max-width: 768px) {
     padding: 0 20px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 16px;
   }
 `;
 
@@ -28,41 +37,46 @@ export const ContentSection = styled.section<{
   gap: 60px;
   align-items: center;
   justify-content: center;
-  min-height: calc(100vh - 70px); // Header 높이 고려
+  min-height: calc(100vh - 70px);
   padding: 80px 0;
-  ${(props) => props.reversed && "grid-template-areas: 'image text';"}
-  ${(props) =>
-    props.$centered &&
-    "grid-template-columns: 1fr; text-align: center; justify-items: center;"}
+  ${(props) => props.reversed && "flex-direction: row-reverse;"}
+  ${(props) => props.$centered && "flex-direction: column; text-align: center;"}
 
+  @media (max-width: 1200px) {
+    gap: 40px;
+    padding: 60px 0;
+  }
 
   @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    gap: 40px;
+    flex-direction: column;
+    gap: 30px;
     padding: 40px 0;
-    ${(props) =>
-      props.reversed &&
-      "grid-template-areas: unset;"} /* 모바일에서는 순서 원복 */
-    ${(props) => props.$centered && "text-align: center;"}
+    text-align: center;
+    ${(props) => props.reversed && "flex-direction: column;"}
+  }
+
+  @media (max-width: 480px) {
+    gap: 24px;
+    padding: 32px 0;
   }
 `;
 
 export const TextContent = styled.div<{ $centered?: boolean }>`
   display: flex;
   flex-direction: column;
-  justify-content: end;
-  height: 400px;
   gap: 24px;
-  ${(props) => props.$centered && "align-items: center;"}
+  flex: 1;
+  max-width: 580px;
+  ${(props) => props.$centered && "align-items: center; text-align: center;"}
 
   @media (max-width: 768px) {
-    ${(props) => props.$centered && "align-items: center;"}
+    max-width: 100%;
+    align-items: center;
   }
 `;
 
 export const MainTitle = styled.h1`
-  width: 500px;
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: 700;
   line-height: 1.2;
   color: #1a1a1a;
@@ -70,7 +84,6 @@ export const MainTitle = styled.h1`
   letter-spacing: -0.02em;
 
   @media (max-width: 768px) {
-    font-size: 2.2rem;
     text-align: center;
   }
 `;
@@ -125,7 +138,7 @@ export const PrimaryButton = styled.button`
   align-items: center;
   justify-content: center; /* 버튼 텍스트 중앙 정렬 */
   gap: 8px;
-  background: #1a1a1a;
+  background: #6D60BA;
   color: white;
   border: none;
   padding: 14px 28px;
@@ -146,7 +159,7 @@ export const PrimaryButton = styled.button`
 
   @media (max-width: 768px) {
     width: 100%;
-    max-width: 300px; /* 모바일에서 버튼 너무 커지는 것 방지 */
+    max-width: 300px;
   }
 `;
 

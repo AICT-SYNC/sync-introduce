@@ -11,10 +11,22 @@ export const Wrap = styled.div`
 `;
 
 export const Container = styled.div`
-    max-width: 1600px;
+  max-width: 1600px;
   width: 100%;
-  padding: 0 40px;
   margin: 0 auto;
+  padding: 0 40px;
+
+  @media (max-width: 1200px) {
+    padding: 0 30px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 16px;
+  }
 `;
 
 export const ContentSection = styled.section`
@@ -22,14 +34,24 @@ export const ContentSection = styled.section`
   gap: 60px;
   align-items: center;
   justify-content: center;
-  min-height: calc(100vh - 70px); // Header 높이 고려
+  min-height: calc(100vh - 70px);
   padding: 80px 0;
 
+  @media (max-width: 1200px) {
+    gap: 40px;
+    padding: 60px 0;
+  }
 
   @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    gap: 40px;
+    flex-direction: column;
+    gap: 30px;
     padding: 40px 0;
+    text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    gap: 24px;
+    padding: 32px 0;
   }
 `;
 
@@ -37,18 +59,25 @@ export const TextContent = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
+  flex: 1;
+  max-width: 580px;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    align-items: center;
+  }
 `;
 
 export const MainTitle = styled.h1`
-  font-size: 2.4rem;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
   font-weight: 700;
   line-height: 1.1;
   color: #1a1a1a;
   margin: 0;
   letter-spacing: -0.02em;
-  
+
   @media (max-width: 768px) {
-    font-size: 2.2rem;
+    text-align: center;
   }
 `;
 
@@ -58,14 +87,13 @@ export const Highlight = styled.span`
 `;
 
 export const Description = styled.p`
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2vw, 1.1rem);
   line-height: 1.6;
   color: #666;
   margin: 0;
-  max-width: 520px;
-  
+
   @media (max-width: 768px) {
-    font-size: 1rem;
+    text-align: center;
   }
 `;
 
@@ -73,32 +101,41 @@ export const ButtonGroup = styled.div`
   display: flex;
   gap: 16px;
   margin-top: 16px;
-  
+
   @media (max-width: 768px) {
     flex-direction: column;
+    width: 100%;
+    align-items: center;
   }
 `;
 
 export const PrimaryButton = styled.button`
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  background: #1a1a1a;
+  background: #6D60BA;
   color: white;
   border: none;
-  padding: 14px 24px;
+  padding: 14px 28px;
   border-radius: 8px;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
-  
+  min-width: 180px;
+
   &:hover {
     background: #333;
   }
-  
+
   &:active {
     background: #0d0d0d;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 300px;
   }
 `;
 
@@ -115,6 +152,13 @@ export const ImageContent = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 1;
+  max-width: 900px;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    order: -1;
+  }
 `;
 
 export const ImageContainer = styled.div`
@@ -130,9 +174,13 @@ export const MainImg = styled.img`
   height: auto;
   display: block;
   border-radius: 12px;
-  
+
   @media (max-width: 768px) {
     max-width: 100%;
+  }
+
+  @media (max-width: 480px) {
+    border-radius: 8px;
   }
 `;
 

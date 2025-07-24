@@ -88,7 +88,7 @@ export const StartSyncBox = styled.a`
   align-items: center;
   justify-content: center;
   border: none;
-  background-color: #202020ff;
+  background-color: #6D60BA;
   border-radius: 8px;
   padding: 12px 24px;
   text-decoration-line: none;
