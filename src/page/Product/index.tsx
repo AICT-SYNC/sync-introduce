@@ -4,7 +4,7 @@ import Footer from "../../Components/Footer";
 import { useNavigate } from "react-router-dom";
 
 // 이미지 임포트 (예시: 실제 사용할 이미지 경로로 변경 필요)
-import mainHeroImage from "../../assets/images/introducePage.png";
+import mainHeroImage from "../../Assets/images/introducePage.png";
 import problemSolutionImage from "../../assets/images/sync-problem-solution.png";
 import aiFeatureImage1 from "../../assets/images/sync-ai-erd.png";
 import aiFeatureImage2 from "../../assets/images/sync-ai-requirements.png";
