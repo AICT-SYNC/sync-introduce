@@ -9,19 +9,18 @@ const Download = () => {
   const handleDownload = (platform: 'mac' | 'windows') => {
     
     const downloadUrls = {
-      mac: './downloads/Sync Desktop-1.0.0-arm64.dmg',
-      windows: './downloads/sync-windows.exe'
+      mac: '/sync-introduce/downloads/Sync Desktop-1.0.0-arm64.dmg',
+      windows: '/sync-introduce/downloads/sync-windows.exe'
     };
     
     const link = document.createElement('a');
     link.href = downloadUrls[platform];
     
     if (platform=="mac") {
-      link.download = "Sync Desktop-1.0.0-arm64";
+      link.download = "Sync Desktop-1.0.0-arm64.dmg";
     } else {
-      alert("준비중입니다. ")
-      return 1
-      link.download = "";
+      alert("준비중입니다.");
+      return;
     }
     document.body.appendChild(link);
     link.click();
