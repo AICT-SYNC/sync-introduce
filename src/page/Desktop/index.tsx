@@ -17,7 +17,7 @@ const Main = () => {
             <S.TextContent>
               <S.MainTitle>
                 비개발자와 개발자간의 협업을 위한
-                <S.Highlight>AI 기반</S.Highlight> 프로젝트 관리 SaaS
+                <S.Highlight> AI 기반</S.Highlight> 프로젝트 관리 SaaS
               </S.MainTitle>
               <S.Description>
                 복잡한 개발 프로세스를 간단하게, AI가 도와주는 스마트한 협업

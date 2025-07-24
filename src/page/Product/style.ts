@@ -11,9 +11,8 @@ export const Wrap = styled.div`
 `;
 
 export const Container = styled.div`
-  max-width: 1200px;
+  max-width: 1600px;
   width: 100%;
-  padding: 0 40px;
   margin: 0 auto;
 
   @media (max-width: 768px) {
@@ -21,22 +20,29 @@ export const Container = styled.div`
   }
 `;
 
-export const ContentSection = styled.section<{ reversed?: boolean; $centered?: boolean }>`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+export const ContentSection = styled.section<{
+  reversed?: boolean;
+  $centered?: boolean;
+}>`
+  display: flex;
   gap: 60px;
   align-items: center;
+  justify-content: center;
   min-height: calc(100vh - 70px); // Header 높이 고려
   padding: 80px 0;
   ${(props) => props.reversed && "grid-template-areas: 'image text';"}
-  ${(props) => props.$centered && "grid-template-columns: 1fr; text-align: center; justify-items: center;"}
+  ${(props) =>
+    props.$centered &&
+    "grid-template-columns: 1fr; text-align: center; justify-items: center;"}
 
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     gap: 40px;
     padding: 40px 0;
-    ${(props) => props.reversed && "grid-template-areas: unset;"} /* 모바일에서는 순서 원복 */
+    ${(props) =>
+      props.reversed &&
+      "grid-template-areas: unset;"} /* 모바일에서는 순서 원복 */
     ${(props) => props.$centered && "text-align: center;"}
   }
 `;
@@ -44,6 +50,8 @@ export const ContentSection = styled.section<{ reversed?: boolean; $centered?: b
 export const TextContent = styled.div<{ $centered?: boolean }>`
   display: flex;
   flex-direction: column;
+  justify-content: end;
+  height: 400px;
   gap: 24px;
   ${(props) => props.$centered && "align-items: center;"}
 
@@ -53,7 +61,8 @@ export const TextContent = styled.div<{ $centered?: boolean }>`
 `;
 
 export const MainTitle = styled.h1`
-  font-size: clamp(2.5rem, 5vw, 3.8rem);
+  width: 500px;
+  font-size: 2.5rem;
   font-weight: 700;
   line-height: 1.2;
   color: #1a1a1a;
@@ -82,7 +91,7 @@ export const SectionTitle = styled.h2<{ $centered?: boolean }>`
 `;
 
 export const Highlight = styled.span`
-  color: #0066ff;
+  color: #3f328c;
   font-weight: 700;
 `;
 
@@ -173,11 +182,11 @@ export const ImageContainer = styled.div`
 `;
 
 export const MainImg = styled.img`
-  max-width: 1200px;
+  max-width: 900px;
   height: auto;
   display: block;
   border-radius: 12px;
-  
+
   @media (max-width: 768px) {
     max-width: 100%;
   }

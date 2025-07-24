@@ -11,20 +11,21 @@ export const Wrap = styled.div`
 `;
 
 export const Container = styled.div`
-  max-width: 1200px;
+    max-width: 1600px;
   width: 100%;
   padding: 0 40px;
   margin: 0 auto;
 `;
 
 export const ContentSection = styled.section`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   gap: 60px;
   align-items: center;
-  min-height: calc(100vh - 70px);
+  justify-content: center;
+  min-height: calc(100vh - 70px); // Header 높이 고려
   padding: 80px 0;
-  
+
+
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -39,7 +40,7 @@ export const TextContent = styled.div`
 `;
 
 export const MainTitle = styled.h1`
-  font-size: clamp(2.5rem, 5vw, 3.8rem);
+  font-size: 2.4rem;
   font-weight: 700;
   line-height: 1.1;
   color: #1a1a1a;
@@ -52,7 +53,7 @@ export const MainTitle = styled.h1`
 `;
 
 export const Highlight = styled.span`
-  color: #0066ff;
+  color: #6D60BA;
   font-weight: 700;
 `;
 
@@ -125,8 +126,7 @@ export const ImageContainer = styled.div`
 `;
 
 export const MainImg = styled.img`
-  width: 100%;
-  max-width: 800px;
+  max-width: 900px;
   height: auto;
   display: block;
   border-radius: 12px;
