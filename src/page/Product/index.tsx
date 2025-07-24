@@ -5,10 +5,10 @@ import { useNavigate } from "react-router-dom";
 
 // 이미지 임포트 (예시: 실제 사용할 이미지 경로로 변경 필요)
 import mainHeroImage from "../../Assets/images/introducePage.png";
-import problemSolutionImage from "../../assets/images/sync-problem-solution.png";
-import aiFeatureImage1 from "../../assets/images/sync-ai-erd.png";
-import aiFeatureImage2 from "../../assets/images/sync-ai-requirements.png";
-import collaborationFeatureImage1 from "../../assets/images/sync-problem-solution.png";
+import problemSolutionImage from "../../Assets/images/sync-problem-solution.png";
+import aiFeatureImage1 from "../../Assets/images/sync-ai-erd.png";
+import aiFeatureImage2 from "../../Assets/images/sync-ai-requirements.png";
+import collaborationFeatureImage1 from "../../Assets/images/sync-problem-solution.png";
 
 const Product = () => {
   const navigate = useNavigate();
