@@ -10,14 +10,14 @@ const Download = () => {
     
     const downloadUrls = {
       mac: 'https://github.com/AICT-SYNC/sync-introduce/releases/download/v1.0.0/Sync.Desktop-1.0.0-arm64.dmg',
-      windows: '/sync-introduce/downloads/sync-windows.exe'
+      windows: 'https://github.com/AICT-SYNC/sync-introduce/releases/download/v1.0.0/Sync.Desktop.Setup.1.0.0.exe'
     };
     
     const link = document.createElement('a');
     link.href = downloadUrls[platform];
     link.download = '';
     
-    if (platform === "mac") {
+    if (platform === "windows") {
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
