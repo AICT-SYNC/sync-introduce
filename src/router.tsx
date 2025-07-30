@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Desktop from "./page/Desktop";
-import Download from "./page/Download";
+// import Download from "./page/Download";
 import Product from "./page/Product";
 import WaitingList from "./page/Waitinglist";
 
