@@ -19,7 +19,7 @@ const Footer = () => {
               <S.ColumnTitle>제품</S.ColumnTitle>
               <S.LinkItem onClick={() => navigate("/product")}>제품 소개</S.LinkItem>
               <S.LinkItem onClick={() => navigate("/download")}>다운로드</S.LinkItem>
-              <S.LinkItem href="https://www.sync-saas.com" target="_blank">Sync 사용하기</S.LinkItem>
+              <S.LinkItem onClick={() => navigate("/waitinglist")}>Sync 사용하기</S.LinkItem>
             </S.LinkColumn>
             
             <S.LinkColumn>
