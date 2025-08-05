@@ -30,14 +30,12 @@ const Product = () => {
                 팀원이 원활하게 소통하고 협력하도록 돕습니다.
               </S.Description>
               <S.ButtonGroup>
-                <S.PrimaryButton>
-                  <a href="https://www.sync-saas.com" target="_self" style={{textDecoration: "none", color: "#ededed"}}>
-                    <S.ButtonText>Sync 무료로 사용하기</S.ButtonText>
-                  </a>
+                <S.PrimaryButton onClick={() => navigate("/waitinglist")}>
+                  <S.ButtonText>Sync 무료로 사용하기</S.ButtonText>
                 </S.PrimaryButton>
-                <S.SecondaryButton onClick={() => navigate("/download")}>
+                {/* <S.SecondaryButton onClick={() => navigate("/download")}>
                   <S.ButtonText>다운로드</S.ButtonText>
-                </S.SecondaryButton>
+                </S.SecondaryButton> */}
               </S.ButtonGroup>
             </S.TextContent>
             <S.ImageContent>
@@ -64,14 +62,14 @@ const Product = () => {
                 있습니다.
               </S.Description>
               <S.ButtonGroup>
-                <S.PrimaryButton>
+                {/* <S.PrimaryButton>
                   <a href="https://www.sync-saas.com" target="_self" style={{textDecoration: "none", color: "#ededed"}}>
                     <S.ButtonText>Sync 무료로 사용하기</S.ButtonText>
                   </a>
-                </S.PrimaryButton>
-                <S.SecondaryButton onClick={() => navigate("/download")}>
+                </S.PrimaryButton> */}
+                {/* <S.SecondaryButton onClick={() => navigate("/download")}>
                   <S.ButtonText>다운로드</S.ButtonText>
-                </S.SecondaryButton>
+                </S.SecondaryButton> */}
               </S.ButtonGroup>
             </S.TextContent>
             <S.ImageContent>
@@ -169,7 +167,7 @@ const Product = () => {
                 프로젝트 성공에 한 발 더 다가설 수 있습니다.
               </S.Description>
               <S.ButtonGroup>
-                <S.PrimaryButton onClick={() => navigate("/download")}>
+                <S.PrimaryButton onClick={() => navigate("/waitinglist")}>
                   <S.ButtonText>Sync 무료로 시작하기</S.ButtonText>
                 </S.PrimaryButton>
               </S.ButtonGroup>
