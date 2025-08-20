@@ -4,8 +4,10 @@ import Router from "./router";
 import { BrowserRouter } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 
+const basename = import.meta.env.PROD ? "/sync-introduce/" : "/";
+
 createRoot(document.getElementById("root")!).render(
-  <BrowserRouter basename="/sync-introduce/">
+  <BrowserRouter basename={basename}>
     <Router />
     <ToastContainer
       position="top-right"
