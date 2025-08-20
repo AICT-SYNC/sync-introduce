@@ -31,7 +31,7 @@ const Product = () => {
               </S.Description>
               <S.ButtonGroup>
                 <S.PrimaryButton onClick={() => navigate("/waitinglist")}>
-                  <S.ButtonText>Sync 무료로 사용하기</S.ButtonText>
+                  <S.ButtonText>베타테스트 신청</S.ButtonText>
                 </S.PrimaryButton>
                 {/* <S.SecondaryButton onClick={() => navigate("/download")}>
                   <S.ButtonText>다운로드</S.ButtonText>
@@ -168,7 +168,7 @@ const Product = () => {
               </S.Description>
               <S.ButtonGroup>
                 <S.PrimaryButton onClick={() => navigate("/waitinglist")}>
-                  <S.ButtonText>Sync 무료로 시작하기</S.ButtonText>
+                  <S.ButtonText>베타테스트 신청</S.ButtonText>
                 </S.PrimaryButton>
               </S.ButtonGroup>
             </S.TextContent>

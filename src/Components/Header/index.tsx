@@ -15,7 +15,7 @@ const Header = () => {
           <S.MenuItem onClick={() => navigate("/download")}>베타테스트 신청하기</S.MenuItem>
         </S.Menus>
         <S.StartSyncBox onClick={() => navigate("/waitinglist")}>
-          <S.StartSyncText>Sync 무료로 사용하기</S.StartSyncText>
+          <S.StartSyncText>베타테스트 신청</S.StartSyncText>
         </S.StartSyncBox>
       </S.Container>
     </S.Wrap>
