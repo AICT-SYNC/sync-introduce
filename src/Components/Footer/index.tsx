@@ -17,9 +17,9 @@ const Footer = () => {
           <S.LinksSection>
             <S.LinkColumn>
               <S.ColumnTitle>제품</S.ColumnTitle>
-              <S.LinkItem onClick={() => navigate("/product")}>제품 소개</S.LinkItem>
-              <S.LinkItem onClick={() => navigate("/download")}>다운로드</S.LinkItem>
-              <S.LinkItem onClick={() => navigate("/waitinglist")}>Sync 사용하기</S.LinkItem>
+              <S.LinkItem href="/product" onClick={() => navigate("/product")}>제품 소개</S.LinkItem>
+              <S.LinkItem href="/download" onClick={() => navigate("/download")}>다운로드</S.LinkItem>
+              <S.LinkItem href="/waitinglist" onClick={() => navigate("/waitinglist")}>Sync 사용하기</S.LinkItem>
             </S.LinkColumn>
             
             <S.LinkColumn>
