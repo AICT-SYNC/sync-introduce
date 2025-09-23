@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Font } from "sync-design-system";
 
 export const Wrap = styled.div`
   display: flex;
@@ -76,12 +77,9 @@ export const TextContent = styled.div<{ $centered?: boolean }>`
 `;
 
 export const MainTitle = styled.h1`
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
-  font-weight: 700;
-  line-height: 1.2;
-  color: #1a1a1a;
+  font: ${Font.title.title_bold1};
+  color: ${({ theme }) => theme["text-black"]};
   margin: 0;
-  letter-spacing: -0.02em;
 
   @media (max-width: 768px) {
     text-align: center;
@@ -89,12 +87,9 @@ export const MainTitle = styled.h1`
 `;
 
 export const SectionTitle = styled.h2<{ $centered?: boolean }>`
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 700;
-  line-height: 1.2;
-  color: #1a1a1a;
+  font: ${Font.title.title_bold1};
+  color: ${({ theme }) => theme["text-black"]};
   margin: 0;
-  letter-spacing: -0.02em;
   ${(props) => props.$centered && "text-align: center; margin-bottom: 40px;"}
 
   @media (max-width: 768px) {
@@ -109,9 +104,8 @@ export const Highlight = styled.span`
 `;
 
 export const Description = styled.p`
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #666;
+  font: ${Font.body.body3_Regular};
+  color: ${({ theme }) => theme["text-muted"]};
   margin: 0;
   max-width: 580px; /* 텍스트 블록의 가독성을 위해 넓이 조정 */
 
@@ -134,33 +128,8 @@ export const ButtonGroup = styled.div`
 `;
 
 export const PrimaryButton = styled.button`
-  display: flex;
-  align-items: center;
-  justify-content: center; /* 버튼 텍스트 중앙 정렬 */
-  gap: 8px;
-  background: #6D60BA;
   color: white;
   border: none;
-  padding: 14px 28px;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  min-width: 180px; /* 버튼 최소 너비 설정 */
-
-  &:hover {
-    background: #333;
-  }
-
-  &:active {
-    background: #0d0d0d;
-  }
-
-  @media (max-width: 768px) {
-    width: 100%;
-    max-width: 300px;
-  }
 `;
 
 export const SecondaryButton = styled(PrimaryButton)`
@@ -254,9 +223,8 @@ export const FeatureCard = styled.div`
 
 export const FeatureImage = styled.img`
   width: 100%;
-  /* Max-height를 늘려 기능 카드 내 이미지를 더 크게 보이게 합니다. */
-  max-height: 280px; // 이전 200px -> 280px로 증가
-  object-fit: contain; // 이미지가 잘리지 않고 컨테이너에 맞게 스케일
+  max-height: 280px;
+  object-fit: contain;
   margin-bottom: 15px;
   border-radius: 8px;
 `;
@@ -270,8 +238,7 @@ export const FeatureTitle = styled.h3`
 `;
 
 export const FeatureDescription = styled.p`
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #666;
+  font: ${Font.body.body3_Regular};
+  color: ${({ theme }) => theme["text-muted"]};
   margin: 0;
 `;

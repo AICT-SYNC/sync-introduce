@@ -1,9 +1,9 @@
 import * as S from "./style";
 import Header from "../../Components/Header";
-import Footer from "../../Components/Footer"
+import Footer from "../../Components/Footer";
 import IntroducePage from "../../Assets/images/introducePage.png";
-import arrow from "../../Assets/icons/arrow_right.svg";
 import { useNavigate } from "react-router-dom";
+import { Button, ButtonSize, ButtonVariant } from "sync-design-system";
 
 const Main = () => {
   const navigate = useNavigate();
@@ -24,11 +24,12 @@ const Main = () => {
                 환경에서 팀의 생산성을 극대화하세요.
               </S.Description>
               <S.ButtonGroup>
-                <S.PrimaryButton>
-                  <S.ButtonText onClick={() => navigate("/download")}>
-                    Sync 다운로드
-                  </S.ButtonText>
-                  <S.ArrowIcon src={arrow} alt="" />
+                <S.PrimaryButton onClick={() => navigate("/waitinglist")}>
+                  <Button
+                    variant={ButtonVariant.PRIMARY}
+                    size={ButtonSize.XL}
+                    text={"베타테스트 신청"}
+                  />
                 </S.PrimaryButton>
               </S.ButtonGroup>
             </S.TextContent>

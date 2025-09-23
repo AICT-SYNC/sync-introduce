@@ -3,6 +3,7 @@ import * as S from "./style";
 import Header from '../../Components/Header';
 import {  toast, Bounce } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
+import { Button, ButtonSize, ButtonVariant } from 'sync-design-system';
 
 const WaitingList = () => {
   const [formData, setFormData] = useState({
@@ -150,10 +151,12 @@ const WaitingList = () => {
                   rows={5}
                 />
               </S.FormGroup>
-
-              <S.SubmitButton type="submit">
-                등록하기
-              </S.SubmitButton>
+              <Button
+                  variant={ButtonVariant.PRIMARY}
+                  size={ButtonSize.XL}
+                  text={"베타테스트 신청"}
+                  type="submit"
+                />
             </S.FormContainer>
           </S.ContentSection>
         </S.Container>

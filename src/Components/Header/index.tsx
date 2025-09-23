@@ -1,6 +1,7 @@
 import * as S from "./style";
 import bigLogo from "../../Assets/icons/bigLogo.svg";
 import { useNavigate } from "react-router-dom";
+import { Button, ButtonSize, ButtonVariant } from "sync-design-system";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -15,7 +16,7 @@ const Header = () => {
           <S.MenuItem onClick={() => navigate("/download")}>베타테스트 신청하기</S.MenuItem>
         </S.Menus>
         <S.StartSyncBox href="/waitinglist" onClick={() => navigate("/waitinglist")}>
-          <S.StartSyncText>베타테스트 신청</S.StartSyncText>
+        <Button variant={ButtonVariant.PRIMARY} size={ButtonSize.M} text={"베타테스트 신청"} />
         </S.StartSyncBox>
       </S.Container>
     </S.Wrap>

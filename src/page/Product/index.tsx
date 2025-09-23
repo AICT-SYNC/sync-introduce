@@ -2,13 +2,12 @@ import * as S from "./style";
 import Header from "../../Components/Header";
 import Footer from "../../Components/Footer";
 import { useNavigate } from "react-router-dom";
-
-// 이미지 임포트 (예시: 실제 사용할 이미지 경로로 변경 필요)
 import mainHeroImage from "../../Assets/images/introducePage.png";
 import problemSolutionImage from "../../Assets/images/sync-problem-solution.png";
 import aiFeatureImage1 from "../../Assets/images/sync-ai-erd.png";
 import aiFeatureImage2 from "../../Assets/images/sync-ai-requirements.png";
 import collaborationFeatureImage1 from "../../Assets/images/sync-problem-solution.png";
+import { Button, ButtonSize, ButtonVariant } from "sync-design-system";
 
 const Product = () => {
   const navigate = useNavigate();
@@ -30,9 +29,12 @@ const Product = () => {
                 팀원이 원활하게 소통하고 협력하도록 돕습니다.
               </S.Description>
               <S.ButtonGroup>
-                <S.PrimaryButton onClick={() => navigate("/waitinglist")}>
-                  <S.ButtonText>베타테스트 신청</S.ButtonText>
-                </S.PrimaryButton>
+                <Button
+                  variant={ButtonVariant.PRIMARY}
+                  size={ButtonSize.XL}
+                  text={"베타테스트 신청"}
+                  onClick={() => navigate("/waitinglist")}
+                />
                 {/* <S.SecondaryButton onClick={() => navigate("/download")}>
                   <S.ButtonText>다운로드</S.ButtonText>
                 </S.SecondaryButton> */}
@@ -167,9 +169,12 @@ const Product = () => {
                 프로젝트 성공에 한 발 더 다가설 수 있습니다.
               </S.Description>
               <S.ButtonGroup>
-                <S.PrimaryButton onClick={() => navigate("/waitinglist")}>
-                  <S.ButtonText>베타테스트 신청</S.ButtonText>
-                </S.PrimaryButton>
+                <Button
+                  variant={ButtonVariant.PRIMARY}
+                  size={ButtonSize.XL}
+                  text={"베타테스트 신청"}
+                  onClick={() => navigate("/waitinglist")}
+                />
               </S.ButtonGroup>
             </S.TextContent>
           </S.ContentSection>

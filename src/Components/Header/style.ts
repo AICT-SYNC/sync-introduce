@@ -84,27 +84,5 @@ export const MenuItem = styled.button`
 `;
 
 export const StartSyncBox = styled.a`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  background-color: #6D60BA;
-  border-radius: 8px;
-  padding: 12px 24px;
-  text-decoration-line: none;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-
-  &:hover {
-    background-color: #333;
-  }
-
-  &:active {
-    background-color: #555;
-  }
-`;
-export const StartSyncText = styled.span`
-  color: #ededed;
-  font-size: 15px;
-  font-weight: 400;
+  text-decoration: none;
 `;

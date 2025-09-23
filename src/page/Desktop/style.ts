@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Font } from "sync-design-system";
 
 export const Wrap = styled.div`
   display: flex;
@@ -69,12 +70,9 @@ export const TextContent = styled.div`
 `;
 
 export const MainTitle = styled.h1`
-  font-size: clamp(1.8rem, 4vw, 2.4rem);
-  font-weight: 700;
-  line-height: 1.1;
-  color: #1a1a1a;
+  font: ${Font.title.title_bold1};
+  color: ${({theme})=>theme["text-black"]};
   margin: 0;
-  letter-spacing: -0.02em;
 
   @media (max-width: 768px) {
     text-align: center;
@@ -110,33 +108,8 @@ export const ButtonGroup = styled.div`
 `;
 
 export const PrimaryButton = styled.button`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  background: #6D60BA;
-  color: white;
+  color: none;
   border: none;
-  padding: 14px 28px;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  min-width: 180px;
-
-  &:hover {
-    background: #333;
-  }
-
-  &:active {
-    background: #0d0d0d;
-  }
-
-  @media (max-width: 768px) {
-    width: 100%;
-    max-width: 300px;
-  }
 `;
 
 export const ButtonText = styled.span`
