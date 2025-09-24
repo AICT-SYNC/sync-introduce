@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Desktop from "./page/Desktop";
 // import Download from "./page/Download";
 import Product from "./page/Product";
@@ -11,6 +11,7 @@ const Router = () => {
       <Route path="/desktop" element={<Desktop />} />
       <Route path="/download" element={<WaitingList />} />
       <Route path="/waitinglist" element={<WaitingList />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
 };
